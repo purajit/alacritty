@@ -629,8 +629,7 @@ checksum = "75b325c5dbd37f80359721ad39aca5a29fb04c89279657cffdda8736d0c0b9d2"
 [[package]]
 name = "dpi"
 version = "0.1.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f25c0e292a7ca6d6498557ff1df68f32c99850012b6ea401cf8daf771f22ff53"
+source = "git+https://github.com/purajit/winit?branch=20241219-winit-customize-0.30.5+#ea596f5180f86a2faf00eec6aa05c2050906db7b"
 dependencies = [
  "serde",
 ]
@@ -2527,8 +2526,7 @@ checksum = "589f6da84c646204747d1270a2a5661ea66ed1cced2631d546fdfb155959f9ec"
 [[package]]
 name = "winit"
 version = "0.30.5"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "0be9e76a1f1077e04a411f0b989cbd3c93339e1771cb41e71ac4aee95bfd2c67"
+source = "git+https://github.com/purajit/winit?branch=20241219-winit-customize-0.30.5+#ea596f5180f86a2faf00eec6aa05c2050906db7b"
 dependencies = [
  "ahash",
  "android-activity",

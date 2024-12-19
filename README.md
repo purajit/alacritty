@@ -1,3 +1,27 @@
+# Alacritty patch for Agent/Accessory type run
+This uses a patched version of `winit` that allows Alacritty to follow `LSUiElement`
+from the package manifest.
+
+This patch was upstreamed to winit in https://github.com/rust-windowing/winit/issues/261, but `winit` has not 
+cut a release since, and additionally, there have been changes to wini that break the
+Alacritty build. So, https://github.com/purajit/winit contains a patch on top of v0.30.5
+of `winit`, which Alacritty trunk uses, and then points the Alacritty dependency for
+`winit` to that branch.
+
+To use this patched Alacritty,
+```
+cargo build --release --target=aarch64-apple-darwin
+cp target/aarch64-apple-darwin/release/alacritty /Applications/Alacritty.app/Contents/MacOS/alacritty
+```
+
+And add to Alacritty's `Info.plist`:
+```xml
+    <key>LSUIElement</key>
+    <true/>
+```
+
+# The rest is from Alacritty upstream
+
 <p align="center">
     <img width="200" alt="Alacritty Logo" src="https://raw.githubusercontent.com/alacritty/alacritty/master/extra/logo/compat/alacritty-term%2Bscanlines.png">
 </p>
